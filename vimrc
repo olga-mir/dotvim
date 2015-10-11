@@ -2,6 +2,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 autocmd BufEnter * silent! lcd %:p:h
 
+" TODO call pathogen#runtime_append_all_bundles()
+" TODO call pathogen#helptags()
+
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 filetype plugin indent on    " required
