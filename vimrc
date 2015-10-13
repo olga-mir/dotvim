@@ -5,6 +5,9 @@ autocmd BufEnter * silent! lcd %:p:h
 " TODO call pathogen#runtime_append_all_bundles()
 " TODO call pathogen#helptags()
 
+" http://stackoverflow.com/questions/24812865/vim-a-shortcut-for-site-wide-search
+command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1] | :copen
+
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 filetype plugin indent on    " required
