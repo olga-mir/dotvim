@@ -15,3 +15,10 @@ Switch to the `~/.vim` directory, and fetch submodules:
 
 For more info:
 http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+
+
+Appendix
+1. To set terminal emulator's colorscheme to used the Solarized palette:
+let g:solarized_termcolors=256
+or
+export TERM=xterm-256color

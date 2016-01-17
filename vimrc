@@ -5,6 +5,10 @@ call pathogen#helptags()
 filetype off                  " required
 autocmd BufEnter * silent! lcd %:p:h
 
+syntax on
+set background=dark
+colorscheme solarized
+
 " http://stackoverflow.com/questions/24812865/vim-a-shortcut-for-site-wide-search
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1] | :copen
 
@@ -23,8 +27,6 @@ set iminsert=0
 set imsearch=0
 set noswapfile
 set mouse=a
-syntax on
-colorscheme elflord
 
 " config it for change buffer without save it when changed
 set hidden "in order to switch between buffers with unsaved change
@@ -40,21 +42,17 @@ let g:indent_guides_guide_size = 1
 set cursorline
 
 if has("gui_running")
-  colorscheme desert
   set bs=2
   set ruler
-  set gfn=Monaco:h16
+  set guifont=Source\ Code\ Pro:h12
   set shell=/bin/bash
 endif
 
-" Additions on 18.11.2014: adding CtrlP to vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-" end Additions on 18.11.2014
 
-" Additions on 13.01.2015: display full file path on Ctrl-g
+" display full file path on Ctrl-g
 set laststatus=2
 set statusline+=%F
-" end Additions on 13.01.2015
 
 let mapleader= ","
 " EasyMotion_leader_key .
