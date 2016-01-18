@@ -28,6 +28,11 @@ set imsearch=0
 set noswapfile
 set mouse=a
 
+function! AirlineInit()
+  let g:airline_section_y = airline#section#create_right(['ffenc', '%{strftime("%H:%M")}'])
+endfunction
+autocmd VimEnter * call AirlineInit()
+
 " config it for change buffer without save it when changed
 set hidden "in order to switch between buffers with unsaved change
 map <silent><F8> :NERDTreeToggle<CR>
