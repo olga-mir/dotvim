@@ -30,6 +30,7 @@ set mouse=a
 
 function! AirlineInit()
   let g:airline_section_y = airline#section#create_right(['ffenc', '%{strftime("%H:%M")}'])
+  let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 endfunction
 autocmd VimEnter * call AirlineInit()
 
