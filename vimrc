@@ -14,10 +14,24 @@ command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>]
 
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-filetype plugin indent on    " required
-let g:ctrlp_regexp = 1
 
-" my configure
+
+""" GENERAL
+filetype plugin indent on    " required
+if has("gui_running")
+  set bs=2
+  set ruler
+  set guifont=Source\ Code\ Pro:h12
+  set shell=/bin/bash
+endif
+
+set laststatus=2
+set statusline+=%F " display full file path on Ctrl-g
+set cursorline " hightlight col and line
+set hidden "in order to switch between buffers with unsaved change
+let mapleader= ","
+
+
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -27,6 +41,8 @@ set iminsert=0
 set imsearch=0
 set noswapfile
 set mouse=a
+set nu
+
 
 function! AirlineInit()
   let g:airline_section_y = airline#section#create_right(['ffenc', '%{strftime("%H:%M")}'])
@@ -34,71 +50,29 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
-" config it for change buffer without save it when changed
-set hidden "in order to switch between buffers with unsaved change
+
 map <silent><F8> :NERDTreeToggle<CR>
-set nu
 map <tab> :tabn<CR>
 let g:user_zen_settings = {
       \  'indentation' : '  '
       \}
 let g:indent_guides_guide_size = 1
 
-" hightlight col and line
-set cursorline
 
-if has("gui_running")
-  set bs=2
-  set ruler
-  set guifont=Source\ Code\ Pro:h12
-  set shell=/bin/bash
-endif
 
+""" CTRL-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_regexp = 1
+noremap <C-P> <Esc>:CtrlP ~/Developer/iflix<CR>
 
-" display full file path on Ctrl-g
-set laststatus=2
-set statusline+=%F
 
-let mapleader= ","
-" EasyMotion_leader_key .
-" My Bundles here:
-"
 " original repos on github
 map <c-t> :FufCoverageFile!<CR>
 let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|vendor)'
 let g:fuf_enumeratingLimit = 50
 let g:fuf_coveragefile_prompt = '=>'
-" non github repos
-" if you like it more than fuf, uncomment here
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
 
-filetype plugin indent on     " required! 
 
-" tab navigation (http://vimcasts.org/episodes/working-with-tabs/)
-map <D-S-]> gt
-map <D-S-[> gT
-map <D-1> 1gt
-map <D-2> 2gt
-map <D-3> 3gt
-map <D-4> 4gt
-map <D-5> 5gt
-map <D-6> 6gt
-map <D-7> 7gt
-map <D-8> 8gt
-map <D-9> 9gt
-map <D-0> :tablast<CR>
-
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
 function MakeDvorak()
   " these remap the hjkl arrow keys. Home row cursor movement is
   " too good to part with.
@@ -139,14 +113,14 @@ function MakeDvorak()
   " mode, meaning that t has different meaning depending on
   " context. For me, it always does the right thing.
 
- if version > 500
-      ounmap t
+  if version > 500
+    ounmap t
   endif
 """
 endfunction
 
 if $KEYBOARD_LAYOUT == "dvorak"
-"  call MakeDvorak()
+  call MakeDvorak()
 endif
 "call MakeDvorak()
 
