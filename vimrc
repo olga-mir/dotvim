@@ -63,6 +63,7 @@ let g:indent_guides_guide_size = 1
 """ CTRL-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_regexp = 1
+let g:ctrlp_show_hidden = 1
 noremap <C-P> <Esc>:CtrlP ~/Developer/iflix<CR>
 
 
