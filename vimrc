@@ -58,7 +58,23 @@ let g:user_zen_settings = {
       \}
 let g:indent_guides_guide_size = 1
 
+" Keep text selected after indentation.
+vnoremap < <gv
+vnoremap > >gv
 
+" Better navigation for beginning and end of line
+" Note that these replace the jump to top (H) and bottom (L) visible lines
+" (https://twitter.com/_supermarin/status/687016530769383425)
+nnoremap H ^
+nnoremap L $
+
+" Type-based indentation
+" See http://stackoverflow.com/questions/8536711/how-to-autoindent-ruby-source-code-in-vim
+set smartindent
+set autoindent
+
+set relativenumber
+set number
 
 """ CTRL-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
