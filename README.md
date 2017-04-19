@@ -1,4 +1,6 @@
-Installation:
+## Installation
+
+Clone this repo:
 
     git clone git://github.com/olga-mir/dotvim.git ~/.vim
 
@@ -17,7 +19,14 @@ For more info:
 http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
 
-Appendix
+## Add stuff
+
+    cd ~/.vim
+    git submodule add https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
+    // commit and push
+
+
+## Misc
 1. To set terminal emulator's colorscheme to used the Solarized palette:
 let g:solarized_termcolors=256
 or

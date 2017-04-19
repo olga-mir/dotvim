@@ -26,9 +26,9 @@ if has("gui_running")
 endif
 
 set laststatus=2
-set statusline+=%F " display full file path on Ctrl-g
-set cursorline " hightlight col and line
-set hidden "in order to switch between buffers with unsaved change
+set statusline+=%F           " display full file path on Ctrl-g
+set cursorline               " hightlight col and line
+set hidden                   " in order to switch between buffers with unsaved change
 let mapleader= ","
 
 
