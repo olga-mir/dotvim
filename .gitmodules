@@ -14,3 +14,6 @@
 [submodule "/Users/olga/.vim/bundle/typescript-vim"]
 	path = /Users/olga/.vim/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "/Users/olga/.vim/bundle/vim-go"]
+	path = /Users/olga/.vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git

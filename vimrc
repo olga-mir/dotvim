@@ -31,8 +31,9 @@ set cursorline               " hightlight col and line
 set hidden                   " in order to switch between buffers with unsaved change
 let mapleader= ","
 
+xnoremap <leader>j <esc>:'<,'>:w !jpterm<CR>
 
-set tabstop=2
+set tabstop=8
 set softtabstop=2
 set shiftwidth=2
 set expandtab
@@ -43,6 +44,12 @@ set noswapfile
 set mouse=a
 set nu
 
+set foldmethod=indent
+set foldcolumn=6  " the number of columns to use for folding display at the left
+set mouse=a
+set foldlevel=20
+
+let g:go_version_warning=0
 
 function! AirlineInit()
   let g:airline_section_y = airline#section#create_right(['ffenc', '%{strftime("%H:%M")}'])
