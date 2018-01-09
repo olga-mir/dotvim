@@ -33,7 +33,7 @@ let mapleader= ","
 
 xnoremap <leader>j <esc>:'<,'>:w !jpterm<CR>
 
-set tabstop=8
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
