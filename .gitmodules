@@ -17,3 +17,12 @@
 [submodule "/Users/olga/.vim/bundle/vim-go"]
 	path = /Users/olga/.vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "/Users/olga/.vim/bundle/vim-github-colorscheme"]
+	path = /Users/olga/.vim/bundle/vim-github-colorscheme
+	url = https://github.com/endel/vim-github-colorscheme.git
+[submodule "/Users/olga/.vim/bundle/Lightning"]
+	path = /Users/olga/.vim/bundle/Lightning
+	url = https://github.com/wimstefan/Lightning.git
+[submodule "bundle/vim-airline-themes"]
+	path = bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git

@@ -6,8 +6,10 @@ filetype off                  " required
 autocmd BufEnter * silent! lcd %:p:h
 
 syntax on
-set background=dark
-colorscheme solarized
+colorscheme github
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+hi NonText guibg=#eeeeee
 
 " http://stackoverflow.com/questions/24812865/vim-a-shortcut-for-site-wide-search
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1] | :copen
@@ -56,6 +58,7 @@ function! AirlineInit()
   let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 endfunction
 autocmd VimEnter * call AirlineInit()
+let g:airline_theme='cool'
 
 
 map <silent><F8> :NERDTreeToggle<CR>
