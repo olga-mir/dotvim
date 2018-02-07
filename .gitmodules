@@ -1,28 +1,28 @@
 [submodule "bundle/fugitive"]
   path = bundle/fugitive
-  url = http://github.com/tpope/vim-fugitive.git
+  url = git://github.com/tpope/vim-fugitive.git
   ignore = dirty
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
+	url = git://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule "/Users/olga/.vim/bundle/typescript-vim"]
-	path = /Users/olga/.vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
-[submodule "/Users/olga/.vim/bundle/vim-go"]
-	path = /Users/olga/.vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
-[submodule "/Users/olga/.vim/bundle/vim-github-colorscheme"]
-	path = /Users/olga/.vim/bundle/vim-github-colorscheme
-	url = https://github.com/endel/vim-github-colorscheme.git
-[submodule "/Users/olga/.vim/bundle/Lightning"]
-	path = /Users/olga/.vim/bundle/Lightning
-	url = https://github.com/wimstefan/Lightning.git
+	url = git://github.com/vim-airline/vim-airline.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = git://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = git://github.com/fatih/vim-go.git
+[submodule "bundle/vim-github-colorscheme"]
+	path = bundle/vim-github-colorscheme
+	url = git://github.com/endel/vim-github-colorscheme.git
+[submodule "bundle/Lightning"]
+	path = bundle/Lightning
+	url = git://github.com/wimstefan/Lightning.git
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
