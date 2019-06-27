@@ -23,9 +23,11 @@ filetype plugin indent on    " required
 if has("gui_running")
   set bs=2
   set ruler
-  set guifont=Source\ Code\ Pro:h12
+  "" set guifont=Source\ Code\ Pro:h12
+  "set guifont=Hack\ 18
   set shell=/bin/bash
 endif
+set guifont=DejaVu\ Sans\ Mono\ 22
 
 set laststatus=2
 set statusline+=%F           " display full file path on Ctrl-g
@@ -45,6 +47,7 @@ set imsearch=0
 set noswapfile
 set mouse=a
 set nu
+set scrolloff=10
 
 set foldmethod=indent
 set foldcolumn=6  " the number of columns to use for folding display at the left
