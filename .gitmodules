@@ -29,3 +29,6 @@
 [submodule "/Users/olga/.vim/bundle/vim-colors-tango"]
 	path = /Users/olga/.vim/bundle/vim-colors-tango
 	url = https://github.com/jsit/disco.vim
+[submodule "/Users/olga/.vim/bundle/vim-tmux-navigator"]
+	path = /Users/olga/.vim/bundle/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
