@@ -5,11 +5,26 @@ call pathogen#helptags()
 filetype off                  " required
 autocmd BufEnter * silent! lcd %:p:h
 
+" for some reason `set background` and `t_Co` is required when running inside tmux
+" otherwise the colors in vim inside tmux are weird.
+" Other thing that worked for me was `export TERM=screen-256color` after
+" entering tmux. https://github.com/tmux/tmux/issues/699
+set background=dark
+set t_Co=256
+
 syntax on
-colorscheme github
-set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+colorscheme disco
+
+" works for light theme:
+" set cursorline
+" hi CursorLine term=bold cterm=bold guibg=Black
+" hi CursorLine term=bold cterm=bold guibg=Grey40
 hi NonText guibg=#eeeeee
+"
+" works for dark theme:
+hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+hi FoldColumn ctermbg=Black ctermfg=White guifg=white guibg=yellow
+hi Folded ctermbg=Black ctermfg=White guifg=white guibg=yellow
 
 " http://stackoverflow.com/questions/24812865/vim-a-shortcut-for-site-wide-search
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1] | :copen
@@ -30,9 +45,15 @@ endif
 set guifont=DejaVu\ Sans\ Mono\ 22
 
 set laststatus=2
-set statusline+=%F           " display full file path on Ctrl-g
-set cursorline               " hightlight col and line
-set hidden                   " in order to switch between buffers with unsaved change
+
+" display full file path on Ctrl-g
+set statusline+=%F
+
+" hightlight col and line
+" set cursorline
+
+" in order to switch between buffers with unsaved change
+set hidden
 let mapleader= ","
 
 xnoremap <leader>j <esc>:'<,'>:w !jpterm<CR>
@@ -46,11 +67,13 @@ set iminsert=0
 set imsearch=0
 set noswapfile
 set mouse=a
-set nu
+" set nu
 set scrolloff=10
 
 set foldmethod=indent
-set foldcolumn=6  " the number of columns to use for folding display at the left
+
+" the number of columns to use for folding display at the left
+set foldcolumn=6
 set mouse=a
 set foldlevel=20
 
@@ -62,7 +85,6 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 let g:airline_theme='cool'
-
 
 map <silent><F8> :NERDTreeToggle<CR>
 map <tab> :tabn<CR>
@@ -93,7 +115,6 @@ set number
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_regexp = 1
 let g:ctrlp_show_hidden = 1
-noremap <C-P> <Esc>:CtrlP ~/Developer/iflix<CR>
 
 
 " original repos on github

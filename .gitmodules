@@ -26,3 +26,6 @@
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "/Users/olga/.vim/bundle/vim-colors-tango"]
+	path = /Users/olga/.vim/bundle/vim-colors-tango
+	url = https://github.com/jsit/disco.vim
