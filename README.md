@@ -31,3 +31,5 @@ http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-patho
 let g:solarized_termcolors=256
 or
 export TERM=xterm-256color
+
+2. `git submodule foreach "(git checkout master; git pull)&"`
