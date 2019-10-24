@@ -22,9 +22,13 @@ http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-patho
 ## Add stuff
 
     cd ~/.vim
-    git submodule add git@github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
+    git submodule add git@github.com:leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
     // commit and push
 
+## Fetch latest versions
+```sh
+git submodule foreach "(git checkout master; git pull)&"
+```
 
 ## Misc
 1. To set terminal emulator's colorscheme to used the Solarized palette:
@@ -32,4 +36,3 @@ let g:solarized_termcolors=256
 or
 export TERM=xterm-256color
 
-2. `git submodule foreach "(git checkout master; git pull)&"`
