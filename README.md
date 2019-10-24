@@ -2,7 +2,7 @@
 
 Clone this repo:
 
-    git clone git://github.com/olga-mir/dotvim.git ~/.vim
+    git clone git@github.com/olga-mir/dotvim.git ~/.vim
 
 Create symlinks:
 
@@ -22,7 +22,7 @@ http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-patho
 ## Add stuff
 
     cd ~/.vim
-    git submodule add https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
+    git submodule add git@github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
     // commit and push
 
 
