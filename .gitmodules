@@ -20,15 +20,9 @@
 [submodule "bundle/vim-github-colorscheme"]
 	path = bundle/vim-github-colorscheme
 	url = git://github.com/endel/vim-github-colorscheme.git
-[submodule "bundle/Lightning"]
-	path = bundle/Lightning
-	url = git://github.com/wimstefan/Lightning.git
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "/Users/olga/.vim/bundle/vim-colors-tango"]
-	path = /Users/olga/.vim/bundle/vim-colors-tango
-	url = https://github.com/jsit/disco.vim
 [submodule "/Users/olga/.vim/bundle/vim-tmux-navigator"]
 	path = /Users/olga/.vim/bundle/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
