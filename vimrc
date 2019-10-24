@@ -11,6 +11,14 @@ set imsearch=0
 set scrolloff=10
 set relativenumber
 set number
+set incsearch
+set foldcolumn=6
+set foldlevel=20
+set foldmethod=syntax
+
+" Should prevent copying line numbers when copying text from vim
+" However it brakes copying completely
+" set mouse=a
 
 function! AirlineInit()
   let g:airline_section_y = airline#section#create_right(['ffenc', '%{strftime("%H:%M")}'])
