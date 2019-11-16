@@ -7,14 +7,26 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-set imsearch=0
 set scrolloff=10
 set relativenumber
 set number
-set incsearch
 set foldcolumn=6
 set foldlevel=20
 set foldmethod=syntax
+
+" this is needed to preserve color scheme inside tmux
+" and prevent font from getting bold.
+" https://github.com/tmux/tmux/issues/699
+set background=dark
+set t_Co=256
+
+" --- Search ---
+" smart case = case sensitive if search term contains capital letters
+set smartcase
+set ignorecase
+set incsearch
+set imsearch=0
+set nohlsearch
 
 " Should prevent copying line numbers when copying text from vim
 " However it brakes copying completely
@@ -44,13 +56,16 @@ nnoremap L $
 set smartindent
 set autoindent
 
-""" CTRL-P
+"""""
+""""" Plugins config
+
+"" CTRL-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_regexp = 1
 let g:ctrlp_show_hidden = 1
 
 
-""" tmux
+"" tmux
 " git@github.com:christoomey/vim-tmux-navigator.git
 let g:tmux_navigator_no_mappings = 1
 
