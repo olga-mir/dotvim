@@ -2,7 +2,7 @@
 
 Clone this repo:
 
-    git clone git@github.com/olga-mir/dotvim.git ~/.vim
+    git clone git@github.com:olga-mir/dotvim.git ~/.vim
 
 Create symlinks:
 
