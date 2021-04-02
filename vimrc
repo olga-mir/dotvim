@@ -6,6 +6,7 @@ syntax on
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+"if set then Ctrl-V<Tab> for real tab
 set expandtab
 set scrolloff=10
 set relativenumber
@@ -17,7 +18,7 @@ set foldmethod=syntax
 " this is needed to preserve color scheme inside tmux
 " and prevent font from getting bold.
 " https://github.com/tmux/tmux/issues/699
-set background=dark
+set background=light
 set t_Co=256
 
 " --- Search ---
