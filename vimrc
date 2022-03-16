@@ -57,6 +57,12 @@ nnoremap L $
 set smartindent
 set autoindent
 
+" Jump to last known cursor in a file
+" https://askubuntu.com/questions/202075/how-do-i-get-vim-to-remember-the-line-i-was-on-when-i-reopen-a-file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
 """""
 """"" Plugins config
 
